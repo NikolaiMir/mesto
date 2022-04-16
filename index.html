@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>mesto</title>
+  </head>
+  <body class="page">
+    <header class="header">
+      <img
+        src="./images/header-logo.svg"
+        alt="логотип сайта"
+        class="header__logo"
+      />
+    </header>
+    <main class="content">
+      <section class="profile">
+        <div class="profile__section">
+          <img
+            src="./images/Avatar.png"
+            alt="фото пользователя"
+            class="profile__avatar"
+          />
+          <div class="profile__info">
+            <div class="profile__wrapper">
+              <h1 class="profile__name">Жак-Ив Кусто</h1>
+              <button class="profile__button"></button>
+            </div>
+            <p class="profile__about">Исследователь океана</p>
+          </div>
+        </div>
+        <button class="profile__add"></button>
+      </section>
+      <section class="gallery">
+        <div class="gallery__item">
+          <img
+            src="./images/Карачаевск.png"
+            alt="фото локации"
+            class="gallery__img"
+          />
+          <div class="gallery__text">
+            <p class="gallery__title">Карачаевск</p>
+            <button class="gallery__like"></button>
+          </div>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="./images/гора Эльбрус.png"
+            alt="фото локации"
+            class="gallery__img"
+          />
+          <div class="gallery__text">
+            <p class="gallery__title">Гора Эльбрус</p>
+            <button class="gallery__like"></button>
+          </div>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="./images/Домбай.png"
+            alt="фото локации"
+            class="gallery__img"
+          />
+          <div class="gallery__text">
+            <p class="gallery__title">Домбай</p>
+            <button class="gallery__like"></button>
+          </div>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="./images/гора Эльбрус.png"
+            alt="фото локации"
+            class="gallery__img"
+          />
+          <div class="gallery__text">
+            <p class="gallery__title">Гора Эльбрус</p>
+            <button class="gallery__like"></button>
+          </div>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="./images/Домбай.png"
+            alt="фото локации"
+            class="gallery__img"
+          />
+          <div class="gallery__text">
+            <p class="gallery__title">Домбай</p>
+            <button class="gallery__like"></button>
+          </div>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="./images/Карачаевск.png"
+            alt="фото локации"
+            class="gallery__img"
+          />
+          <div class="gallery__text">
+            <p class="gallery__title">Карачаево-Черкессия</p>
+            <button class="gallery__like"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__logo">&copy; 2022 Mesto Russia</p>
+    </footer>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__btn-close" type="button"></button>
+        <form class="popup__form" action="#">
+          <h1 class="popup__title">Редактировать профиль</h1>
+          <input type="text" name="name" class="popup__name" />
+          <input type="text" name="job" class="popup__name" id="job" />
+          <button class="popup__btn" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

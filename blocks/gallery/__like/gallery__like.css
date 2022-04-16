@@ -1,0 +1,17 @@
+.gallery__like {
+  border: 0;
+  background-color: #fff;
+  background-image: url(../../../images/disabled.svg);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s linear;
+  width: 22px;
+  height: 19px;
+  padding-right: 20%;
+}
+
+.gallery__like:hover {
+  opacity: 0.6;
+  transition: 0.3s linear;
+}

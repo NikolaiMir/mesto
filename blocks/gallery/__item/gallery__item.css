@@ -1,0 +1,12 @@
+.gallery__item {
+  background-color: #000000;
+  max-width: 282px;
+  max-height: 365px;
+  border-radius: 10px;
+}
+
+@media (max-width: 320px) {
+  .gallery__item {
+    max-height: 361px;
+  }
+}

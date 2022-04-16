@@ -1,0 +1,27 @@
+.header {
+  max-width: 880px;
+  margin: 45px auto 0;
+  padding: 0 0 40px;
+  border-bottom: 1px solid #545454;
+  opacity: 0.7;
+}
+
+@media (max-width: 950px) {
+  .header {
+    max-width: 740px;
+  }
+}
+
+@media (max-width: 660px) {
+  .header {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    max-width: 320px;
+    margin: 28px auto 37px;
+    padding: 0;
+  }
+}
