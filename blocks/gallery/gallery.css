@@ -11,7 +11,7 @@
 @media (max-width: 950px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 660px;
+    max-width: 580px;
   }
 }
 
