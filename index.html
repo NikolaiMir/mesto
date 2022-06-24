@@ -15,6 +15,7 @@
         class="header__logo"
       />
     </header>
+
     <main class="content">
       <section class="profile">
         <div class="profile__section">
@@ -33,89 +34,80 @@
         </div>
         <button class="profile__add" type="button"></button>
       </section>
+
+      <section class="card">
+        <div class="card__list"></div>
+      </section>
+
       <section class="gallery">
-        <div class="gallery__item">
-          <img
-            src="./images/Карачаевск.png"
-            alt="фото локации"
-            class="gallery__img"
-          />
-          <div class="gallery__text">
-            <h2 class="gallery__title">Карачаевск</h2>
-            <button class="gallery__like" type="button"></button>
+        <template id="cards">
+          <div class="gallery__item">
+            <img src="#" alt="фото локации" class="gallery__img" />
+            <button class="gallery__trash" type="button">
+              <img src="./images/trash.png" alt="кнопка удалить" />
+            </button>
+            <div class="gallery__text">
+              <h2 class="gallery__title"></h2>
+              <button class="gallery__like" type="button"></button>
+            </div>
           </div>
-        </div>
-        <div class="gallery__item">
-          <img
-            src="./images/гораЭльбрус.png"
-            alt="фото локации"
-            class="gallery__img"
-          />
-          <div class="gallery__text">
-            <h2 class="gallery__title">Гора Эльбрус</h2>
-            <button class="gallery__like" type="button"></button>
-          </div>
-        </div>
-        <div class="gallery__item">
-          <img
-            src="./images/Домбай.png"
-            alt="фото локации"
-            class="gallery__img"
-          />
-          <div class="gallery__text">
-            <h2 class="gallery__title">Домбай</h2>
-            <button class="gallery__like" type="button"></button>
-          </div>
-        </div>
-        <div class="gallery__item">
-          <img
-            src="./images/гораЭльбрус.png"
-            alt="фото локации"
-            class="gallery__img"
-          />
-          <div class="gallery__text">
-            <h2 class="gallery__title">Гора Эльбрус</h2>
-            <button class="gallery__like" type="button"></button>
-          </div>
-        </div>
-        <div class="gallery__item">
-          <img
-            src="./images/Домбай.png"
-            alt="фото локации"
-            class="gallery__img"
-          />
-          <div class="gallery__text">
-            <h2 class="gallery__title">Домбай</h2>
-            <button class="gallery__like" type="button"></button>
-          </div>
-        </div>
-        <div class="gallery__item">
-          <img
-            src="./images/Карачаевск.png"
-            alt="фото локации"
-            class="gallery__img"
-          />
-          <div class="gallery__text">
-            <h2 class="gallery__title">Карачаево-Черкессия</h2>
-            <button class="gallery__like" type="button"></button>
-          </div>
-        </div>
+        </template>
       </section>
     </main>
+
     <footer class="footer">
       <p class="footer__logo">&copy; 2022 Mesto Russia</p>
     </footer>
-    <div class="popup">
+
+    <div class="popup" id="popup_profile">
       <div class="popup__container">
         <button class="popup__btn-close" type="button"></button>
-        <form class="popup__form" action="#" name="ChangeForm">
-          <h1 class="popup__title">Редактировать профиль</h1>
+        <form class="popup__form" action="#" name="ChangeForm" id="pop-form-edit">
+          <h3 class="popup__title">Редактировать профиль</h3>
           <input type="text" name="name" class="popup__name" id="name" />
           <input type="text" name="job" class="popup__name" id="job" />
           <button class="popup__btn" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
+
+    <div class="popup" id="popup-place__form">
+      <div class="popup__container">
+        <button
+          class="popup__btn-close"
+          type="button"
+          id="closePlaceform"
+        ></button>
+        <form class="popup__form" action="#" name="ChangeForm" id="popup-place__form_Add">
+          <h3 class="popup__title">Новое место</h3>
+          <input
+            type="text"
+            name="name"
+            class="popup__name"
+            id="name-place"
+            placeholder="Название"
+          />
+          <input
+            type="text"
+            name="link"
+            class="popup__name"
+            id="link-place"
+            placeholder="Ссылка на картинку"
+          />
+          <button class="popup__btn" type="submit">Создать</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-img__form">
+      <div class="popup__wrapper">
+          <div class="popup__img-container">
+              <button class="popup__btn-close" type="button" id="popup-img__close"></button>
+              <img class="popup__img-main" src="#" alt="картинка на главной">
+              <p class="popup__img-title"></p>
+          </div>
+      </div>
+
     <script src="./pages/index.js"></script>
   </body>
 </html>

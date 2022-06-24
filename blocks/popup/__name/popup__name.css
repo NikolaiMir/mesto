@@ -10,6 +10,14 @@
   line-height: 17px;
 }
 
+.popup__name::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #c4c4c4;
+}
+
 @media (max-width: 640px) {
   .popup__name {
     width: 238px;
