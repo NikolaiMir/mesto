@@ -1,4 +1,4 @@
-.card__list {
+.card-Template__list {
   max-width: 880px;
   display: grid;
   margin: 0 auto;
@@ -9,14 +9,14 @@
 }
 
 @media (max-width: 950px) {
-  .card__list {
+  .card-Template__list {
     grid-template-columns: repeat(2, 1fr);
     max-width: 580px;
   }
 }
 
 @media (max-width: 588px) {
-  .card__list {
+  .card-Template__list {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     max-width: 282px;

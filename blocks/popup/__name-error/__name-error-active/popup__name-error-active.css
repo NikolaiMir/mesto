@@ -1,0 +1,14 @@
+.popup__name-error-active {
+  color: red;
+  font-size: 12px;
+  margin: 0 auto;
+  width: 358px;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .popup__name-error-active {
+    width: 260px;
+    margin: 0 21px 0;
+  }
+}

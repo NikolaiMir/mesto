@@ -22,6 +22,12 @@
   }
 }
 
+@media (max-width: 360px) {
+  .footer {
+    max-width: 300px;
+  }
+}
+
 @media (max-width: 320px) {
   .footer {
     max-width: 282px;

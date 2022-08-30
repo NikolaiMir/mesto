@@ -7,6 +7,10 @@
   background-color: rgba(17, 17, 17, 0.65);
   z-index: 1;
   height: 100vh;
+  justify-content: center;
   align-items: center;
-  display: none;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s linear;
 }
