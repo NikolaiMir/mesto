@@ -1,6 +1,6 @@
 .popup__name {
   width: 358px;
-  height: 50px;
+  height: 30px;
   padding: 0;
   margin: 0 auto;
   border: 0;
@@ -8,7 +8,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  /* outline: none; */
 }
 
 .popup__name:focus {

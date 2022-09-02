@@ -15,6 +15,7 @@ const inputPlace = document.querySelector("#place");
 const inputLink = document.querySelector("#url");
 const popupImg = document.querySelector("#popupImgForm");
 const btnCloseImage = document.querySelector("#popup-img__close");
+const popups = document.querySelectorAll(".popup");
 
 // Массив карточек initialCards
 const initialCards = [

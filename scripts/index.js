@@ -4,7 +4,6 @@ const inputList = Array.from(document.querySelectorAll(".popup__name"));
 const buttonElement = document.querySelector(".popup__btn");
 const namePlace = inputPlace.value;
 const linkPlace = inputLink.value;
-
 const cardTemplate = document
   .querySelector("#card")
   .content.querySelector(".gallery__item");
@@ -71,11 +70,21 @@ initialCards.forEach(addCard);
 
 // Обработчики событий
 
+// закрытие попапа на клавишу esc
+
+const closePopupEsc = (evt) => {
+  if (evt.key === "Escape") {
+    const popupOpen = document.querySelector(".popup_opened");
+    closePopup(popupOpen);
+  }
+};
+
 const openPopup = (popup) => {
   popup.classList.add("popup_opened");
 };
 
 const closePopup = (popup) => {
+  popup.removeEventListener("keydown", closePopupEsc);
   popup.classList.remove("popup_opened");
 };
 
@@ -119,10 +128,12 @@ function formSubmitHandlerProfile(evt) {
 
 const formPlaceSubmitHandler = (evt) => {
   evt.preventDefault();
+  const nameImg = document.querySelector("#place").value;
+  const linkImg = document.querySelector("#url").value;
 
   const cardNewData = {
-    name: namePlace,
-    link: linkPlace,
+    name: nameImg,
+    link: linkImg,
   };
   addCard(cardNewData);
   closeModelAdd();
@@ -130,32 +141,17 @@ const formPlaceSubmitHandler = (evt) => {
 
 // Закрытие попапов кликом на оверлей
 
-const popupOverleyCloseProfile = (evt) => {
-  if (evt.target === evt.currentTarget) {
-    closePopupProfile();
-  }
+const popupOverleyClose = () => {
+  popups.forEach((popup) => {
+    popup.addEventListener("click", (evt) => {
+      if (evt.target === evt.currentTarget) {
+        closePopup(popup);
+      }
+    });
+  });
 };
 
-const popupOverleyCloseAdd = (evt) => {
-  if (evt.target === evt.currentTarget) {
-    closeModelAdd();
-  }
-};
-
-const popupOverleyCloseImage = (evt) => {
-  if (evt.target === evt.currentTarget) {
-    closeModelImage();
-  }
-};
-
-// закрытие попапа на клавишу esc
-
-const closePopupEsc = (evt) => {
-  if (evt.key === "Escape") {
-    const popupOpen = document.querySelector(".popup_opened");
-    closePopup(popupOpen);
-  }
-};
+popupOverleyClose();
 
 // Слушатели событий
 
@@ -172,11 +168,5 @@ btnClosePopupAdd.addEventListener("click", closeModelAdd);
 formPlace.addEventListener("submit", formPlaceSubmitHandler);
 
 btnCloseImage.addEventListener("click", closeModelImage);
-
-popupProfile.addEventListener("click", popupOverleyCloseProfile);
-
-popupAdd.addEventListener("click", popupOverleyCloseAdd);
-
-popupImg.addEventListener("click", popupOverleyCloseImage);
 
 document.addEventListener("keydown", closePopupEsc);

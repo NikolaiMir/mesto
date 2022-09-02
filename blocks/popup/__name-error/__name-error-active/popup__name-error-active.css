@@ -1,7 +1,7 @@
 .popup__name-error-active {
   color: red;
   font-size: 12px;
-  margin: 0 auto;
+  margin: 5px auto 0;
   width: 358px;
   display: block;
 }
