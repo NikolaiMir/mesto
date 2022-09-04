@@ -13,14 +13,6 @@
   padding: 0;
 }
 
-.popup__btn:disabled {
-  background: transparent;
-  opacity: 0.3;
-  color: #000;
-  border: 1px solid #000;
-  cursor: not-allowed;
-}
-
 .popup__btn:hover {
   opacity: 0.8;
   transition: 0.2s linear;

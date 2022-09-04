@@ -79,6 +79,7 @@ const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
   } else {
     // иначе сделай кнопку активной
     buttonElement.classList.remove(inactiveButtonClass);
+    buttonElement.removeAttribute("disabled", "disabled");
   }
 };
 

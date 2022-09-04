@@ -101,7 +101,8 @@ const closePopupProfile = () => {
 const openModelAdd = () => {
   const btnSubmitPlace = document.querySelector("#btn-submit-place");
   btnSubmitPlace.classList.add("popup__btn_disabled");
-
+  btnSubmitPlace.setAttribute("disabled", "disabled");
+  // btnSubmitPlace.removeAttribute("disabled", "disabled");
   openPopup(popupAdd);
 };
 
