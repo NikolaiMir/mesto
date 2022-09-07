@@ -80,11 +80,12 @@ const closePopupEsc = (evt) => {
 };
 
 const openPopup = (popup) => {
+  document.addEventListener("keydown", closePopupEsc);
   popup.classList.add("popup_opened");
 };
 
 const closePopup = (popup) => {
-  popup.removeEventListener("keydown", closePopupEsc);
+  document.removeEventListener("keydown", closePopupEsc);
   popup.classList.remove("popup_opened");
 };
 
@@ -102,7 +103,6 @@ const openModelAdd = () => {
   const btnSubmitPlace = document.querySelector("#btn-submit-place");
   btnSubmitPlace.classList.add("popup__btn_disabled");
   btnSubmitPlace.setAttribute("disabled", "disabled");
-  // btnSubmitPlace.removeAttribute("disabled", "disabled");
   openPopup(popupAdd);
 };
 
@@ -169,5 +169,3 @@ btnClosePopupAdd.addEventListener("click", closeModelAdd);
 formPlace.addEventListener("submit", formPlaceSubmitHandler);
 
 btnCloseImage.addEventListener("click", closeModelImage);
-
-document.addEventListener("keydown", closePopupEsc);
